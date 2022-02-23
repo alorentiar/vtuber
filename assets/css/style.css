@@ -95,7 +95,7 @@ navbar {
   /* pointer-events: none; */
 }
 
-.debut:after {
+/* .debut:after {
   content: "";
   position: absolute;
   background: linear-gradient(to bottom, white, black);
@@ -103,10 +103,8 @@ navbar {
   right: 0;
   bottom: 0;
   left: 0;
-  /* width: 80%;
-  height: 50%; */
   opacity: 0.5;
-}
+} */
 
 /* INI UNTUK AUDITION */
 
