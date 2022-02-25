@@ -228,40 +228,36 @@ footer {
 }
 
 /* INI UNTUK EVENTS */
-
 .events {
-  margin: 20px 50px;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 0 5%;
+  height: auto;
 }
 
-.events h1 {
-  margin-bottom: 20px;
+.slider {
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  margin-top: 32px;
 }
 
-.events table {
-  display: inline-block;
-  justify-content: space-between;
-  display: flex;
+.image-event {
+  max-width: 100%;
+  height: auto;
 }
 
-.event-card {
-  height: 200px;
-  width: auto;
-  border-radius: 20px;
-  margin: 10px 20px;
+.image-event img {
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
-.event-text {
+.text-event {
+  margin: 10px 0;
   text-align: center;
 }
 
 /* TALENT */
 .top-talent {
-  /* border-radius: 20px;
-  outline: 2px solid var(--sec-color); */
-  /* height: 50vh;*/
   width: 90%;
   align-items: center;
   justify-content: center;
