@@ -33,6 +33,7 @@ navbar {
 
 .menu-style-active {
   color: var(--main-sec-color);
+  font-weight: 500;
 }
 
 .icon {
@@ -87,6 +88,7 @@ navbar {
   position: relative;
   display: flex;
   align-items: center;
+  margin-top: 4%;
 }
 .debut-video {
   height: 100%;
@@ -208,6 +210,7 @@ navbar {
 footer {
   background-color: var(--sec-color);
   height: auto;
+  padding: 20px 5vw;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -215,16 +218,14 @@ footer {
   color: white;
 }
 .copyright {
-  padding-left: 10pt;
+  padding: 0;
+  margin: 0;
+  /* padding-left: 10pt; */
 }
-
-.socialmedia {
-  padding: 10px;
-}
-
 .sosialmedia img {
-  height: 41pt;
+  height: 40pt;
   width: 40pt;
+  padding-left: 20px;
 }
 
 /* INI UNTUK EVENTS */
@@ -258,6 +259,52 @@ footer {
 }
 
 /* TALENT */
+.categories {
+  width: 100vw;
+  height: fit-content;
+}
+
+.container-vtuber {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container-category {
+  display: flex;
+  flex-direction: row;
+  background-color: blue;
+  padding: 10px;
+}
+
+.vtuber {
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+}
+
+.img-vtuber img {
+  border-radius: 40px;
+  outline: 10px solid var(--main-color);
+  outline-offset: -5px;
+  height: 300px;
+  width: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+}
+
+.desc-vtuber {
+  justify-content: center;
+  text-align: center;
+}
+
+.container-vtuber {
+  justify-content: center;
+}
+
+.region h2 {
+  margin-left: 50px;
+}
+
 .top-talent {
   /* border-radius: 20px;
   outline: 2px solid var(--sec-color); */
@@ -409,6 +456,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   margin-top: 24px;
+  margin-bottom: 15px;
 }
 
 /* FIGURE */
@@ -421,7 +469,7 @@ footer {
   align-items: center;
   background-color: #ffffff;
   position: relative;
-  padding-top: 30px;
+  padding-top: 180px;
   /* background-color: black; */
 }
 .figure {
@@ -499,17 +547,16 @@ footer {
 
 .container-content {
   width: 100vw;
-  height: fit-content;
+  height: 100vh;
   display: flex;
   flex-direction: row;
-  background-color: aqua;
 }
 
 .figure-cart {
   width: 60vw;
-  height: 100vh;
-  flex-wrap: wrap;
-  background-color: white;
+  height: 75vh;
+  /* background-color: pink; */
+  margin: auto;
 }
 
 .cart-object h1 {
@@ -566,14 +613,140 @@ footer {
   font-size: 1.2rem;
 }
 
+/* VERTICAL LINE */
+.vertical-line {
+  height: 80%;
+  border-right: 1px solid #000900;
+  margin: auto 0px;
+}
+
 /* PAYMENT */
 .payment-details {
-  width: 40vw;
-  height: 100vh;
+  /* width: 40vw;
+  height: 100vh; */
+  width: 25vw;
+  height: 75vh;
+  /* background-color: pink; */
+  margin: auto;
 }
 
 .header-payment p {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  margin-left: 50px;
+}
+
+.voucher-code input {
+  border-radius: 12px;
+  width: 80%;
+  padding: 15px;
+  border-width: 1px;
+  display: flex;
+  margin: 30px 0px;
+  /* margin: auto; */
+}
+
+.shopping-sum-title {
+  font-size: 1.6rem;
+}
+
+.shopping-sum-sub {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 15px auto;
+  font-size: 1.2rem;
+}
+
+.line {
+  width: 90%;
+  border-bottom: 1px solid #000;
+  margin: 20px auto;
+  line-height: 0.1em;
+}
+
+.buy {
+  background-color: var(--main-sec-color);
+  border-radius: 10px;
+  height: 7%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.buy a {
+  color: white;
+}
+
+/* PAYMENT / CUSTOMER INFORMATION */
+/* .payment-vertical-line {
+  height: 80%;
+  border-right: 4px solid #ffffff;
+  margin: auto 0px;
+} */
+.container-payment {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.customer-information-forms {
+  /* display: flex; */
+  /* margin: auto; */
+  /* justify-content: flex-start; */
+  height: fit-content;
+}
+
+.customer-information-forms form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  color: white;
+}
+
+.customer-information-forms input {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 21.4vw;
+}
+
+.customer-information-card {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  background-color: var(--sec-color);
+  height: fit-content;
+  width: 60vw;
+  border-radius: 20px;
+  padding: 4%;
+}
+
+.customer-information-card h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.payment {
+  margin: 0px auto;
+  color: white;
+  width: 21.4vw;
+  height: 58vh;
+}
+
+.payment-method {
+  margin: 10px 0px;
+}
+
+.payment-total-payment {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  justify-content: space-between;
 }
