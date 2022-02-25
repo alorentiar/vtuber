@@ -62,7 +62,7 @@ navbar {
   font-size: 20px;
   color: var(--main-color);
   justify-content: center;
-  padding-left: 10px;
+  padding-left: 40px;
 }
 
 .container {
@@ -129,7 +129,7 @@ navbar {
 /* INI UNTUK AUDITION */
 
 .square {
-  background-color: white;
+  /* background-color: white; */
   height: 70vh;
   position: relative;
   width: 100vw;
@@ -139,6 +139,7 @@ navbar {
   position: absolute;
   background-color: var(--sec-color);
   height: 50vh;
+  width: 100%;
   padding: 5vh 10%;
   border-radius: 0 150px 0 0;
   bottom: 0;
