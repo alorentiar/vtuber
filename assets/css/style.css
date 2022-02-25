@@ -498,7 +498,7 @@ footer {
 }
 
 .container-content {
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -506,8 +506,11 @@ footer {
 }
 
 .figure-cart {
-  width: 50%;
-  height: fit-content;
+  width: 60vw;
+  height: 100vh;
   flex-wrap: wrap;
   background-color: white;
+}
+
+.cart-object h1 {
 }
