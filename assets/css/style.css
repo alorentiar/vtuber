@@ -494,16 +494,82 @@ footer {
 }
 
 .container-content {
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: aqua;
 }
 
 .figure-cart {
-  width: 50%;
-  height: fit-content;
+  width: 60vw;
+  height: 100vh;
   flex-wrap: wrap;
   background-color: white;
+}
+
+.cart-object h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.card-cart-object {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--sec-color);
+  margin: 20px;
+  width: auto;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+.checkbox {
+  align-self: center;
+}
+
+.check {
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.picture img {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+.pic-cart-desc {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.pic-cart-desc-head {
+  padding-top: 23px;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.pic-cart-desc-price {
+  font-size: 3rem;
+  font-weight: 1000;
+}
+
+.pic-cart-desc-type {
+  font-size: 1.2rem;
+}
+
+/* PAYMENT */
+.payment-details {
+  width: 40vw;
+  height: 100vh;
+}
+
+.header-payment p {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-left: 50px;
 }
