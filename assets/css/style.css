@@ -161,15 +161,16 @@ navbar {
   bottom: 0;
   z-index: 10;
   left: 3vw;
-  /* object-fit: cover; */
 }
 
 .desc-audition {
   width: 55%;
   float: right;
-  right: 0;
   position: relative;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .text-audition {
@@ -179,20 +180,20 @@ navbar {
 .tombol-vtuber {
   background-color: var(--main-sec-color);
   border-radius: 5px;
-  width: 14vw;
-  height: 8vh;
+  width: 200px;
+  height: 70px;
   color: white;
   font-size: 24px;
   box-shadow: 0px 15px 1px var(--main-color);
-  bottom: 15px;
-  position: absolute;
+  margin-bottom: 15px;
   border: none;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .tombol-vtuber:active {
   box-shadow: none;
-  bottom: 0;
+  margin-bottom: 0px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -332,22 +333,71 @@ footer {
 }
 
 .top-talent {
-  width: 90%;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  width: 90vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* padding: 5%; */
 }
 
 .top-talent-content {
-  border-radius: 20px;
-  outline: 2px solid var(--sec-color);
-  height: 50vh;
-  width: 90%;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  height: 60vh;
+  padding: 5%;
+  width: 100%;
+  display: flex;
+}
+
+.ctg-talent {
+  display: flex;
+  gap: 20px;
+}
+
+.text-talent {
+  margin-left: 100px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ctg-talent p {
+  background-color: #b31313;
+  font-weight: bold;
+  color: white;
+  font-size: large;
+  line-height: 200%;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+.talent-content {
+  margin-top: 20px;
+}
+
+.header-talent {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.body-talent {
+  font-size: 1.2rem;
+  line-height: 200%;
+}
+
+.talent-image {
+  max-height: 100%;
+  width: auto;
+  /* float: left; */
+  aspect-ratio: 1/1;
+  /* border: 1px solid red; */
+}
+
+.talent-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .categories-header {
