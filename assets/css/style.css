@@ -231,11 +231,10 @@ footer {
   margin: 0 auto;
 }
 
-.events > p{
+.events > p {
   font-size: 4rem;
   font-weight: bold;
   color: var(--sec-color);
-
 }
 .slider {
   margin-top: 30px;
@@ -246,11 +245,11 @@ footer {
   gap: 1vw;
 }
 
-.card-event{
+.card-event {
   max-width: 30vw;
   height: auto;
 }
- 
+
 .image-event {
   /* width: 100%; */
   height: auto;
@@ -429,7 +428,7 @@ footer {
   align-items: center;
   background-color: #ffffff;
   position: relative;
-  padding-top: 30px;
+  padding-top: 120px;
   /* background-color: black; */
 }
 .figure {
@@ -507,17 +506,16 @@ footer {
 
 .container-content {
   width: 100vw;
-  height: fit-content;
+  height: 100vh;
   display: flex;
   flex-direction: row;
-  background-color: aqua;
 }
 
 .figure-cart {
   width: 60vw;
-  height: 100vh;
-  flex-wrap: wrap;
-  background-color: white;
+  height: 75vh;
+  /* background-color: pink; */
+  margin: auto;
 }
 
 .cart-object h1 {
@@ -574,14 +572,140 @@ footer {
   font-size: 1.2rem;
 }
 
+/* VERTICAL LINE */
+.vertical-line {
+  height: 80%;
+  border-right: 1px solid #000900;
+  margin: auto 0px;
+}
+
 /* PAYMENT */
 .payment-details {
-  width: 40vw;
-  height: 100vh;
+  /* width: 40vw;
+  height: 100vh; */
+  width: 25vw;
+  height: 75vh;
+  /* background-color: pink; */
+  margin: auto;
 }
 
 .header-payment p {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  margin-left: 50px;
+}
+
+.voucher-code input {
+  border-radius: 12px;
+  width: 80%;
+  padding: 15px;
+  border-width: 1px;
+  display: flex;
+  margin: 30px 0px;
+  /* margin: auto; */
+}
+
+.shopping-sum-title {
+  font-size: 1.6rem;
+}
+
+.shopping-sum-sub {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 15px auto;
+  font-size: 1.2rem;
+}
+
+.line {
+  width: 90%;
+  border-bottom: 1px solid #000;
+  margin: 20px auto;
+  line-height: 0.1em;
+}
+
+.buy {
+  background-color: var(--main-sec-color);
+  border-radius: 10px;
+  height: 7%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.buy a {
+  color: white;
+}
+
+/* PAYMENT / CUSTOMER INFORMATION */
+/* .payment-vertical-line {
+  height: 80%;
+  border-right: 4px solid #ffffff;
+  margin: auto 0px;
+} */
+.container-payment {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.customer-information-forms {
+  /* display: flex; */
+  /* margin: auto; */
+  /* justify-content: flex-start; */
+  height: fit-content;
+}
+
+.customer-information-forms form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  color: white;
+}
+
+.customer-information-forms input {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 21.4vw;
+}
+
+.customer-information-card {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  background-color: var(--sec-color);
+  height: fit-content;
+  width: 60vw;
+  border-radius: 20px;
+  padding: 4%;
+}
+
+.customer-information-card h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.payment {
+  margin: 0px auto;
+  color: white;
+  width: 21.4vw;
+  height: 58vh;
+}
+
+.payment-method {
+  margin: 10px 0px;
+}
+
+.payment-total-payment {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  justify-content: space-between;
 }
