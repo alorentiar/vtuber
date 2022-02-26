@@ -267,7 +267,52 @@ footer {
   text-align: center;
 }
 
-/* TALENT */
+.categories {
+  width: 100vw;
+  height: fit-content;
+}
+
+.container-vtuber {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container-category {
+  display: flex;
+  flex-direction: row;
+  background-color: blue;
+  padding: 10px;
+}
+
+.vtuber {
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+}
+
+.img-vtuber img {
+  border-radius: 40px;
+  outline: 10px solid var(--main-color);
+  outline-offset: -5px;
+  height: 300px;
+  width: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+}
+
+.desc-vtuber {
+  justify-content: center;
+  text-align: center;
+}
+
+.container-vtuber {
+  justify-content: center;
+}
+
+.region h2 {
+  margin-left: 50px;
+}
+
 .top-talent {
   width: 90%;
   align-items: center;
@@ -327,97 +372,6 @@ footer {
 .categories-content h2 {
   margin-left: 5%;
 }
-
-/* NENDOROID */
-
-.container-nendoroid {
-  margin: 0;
-  display: flex;
-  height: 18vh;
-  max-width: 100%;
-  align-items: center;
-  background-color: #ffffff;
-  position: relative;
-}
-
-.nendoroid {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.text-head {
-  padding: 60px 50px;
-}
-
-.text-head p {
-  font-size: 28pt;
-  font-weight: 500;
-}
-
-.card-container {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  align-items: center;
-  /* background-color: aquamarine; */
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: auto;
-  margin-bottom: 50px;
-}
-
-.card {
-  flex-wrap: wrap;
-  margin: 20px;
-  height: fit-content;
-  width: 25vw;
-  justify-content: center;
-  background-color: var(--sec-color);
-  border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 10px;
-}
-
-.card-image {
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.card-image img {
-  width: 22vw;
-  height: auto;
-  /* height: 50vh; */
-  display: block;
-  margin: auto;
-}
-
-.card-desc {
-  color: white;
-  margin-left: 5%;
-  margin-bottom: 8px;
-}
-
-.sub-text {
-  font-size: 14pt;
-}
-
-.tombol-beli {
-  background-color: var(--main-sec-color);
-  width: 90%;
-  height: 8vh;
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 24px;
-}
-
 /* FIGURE */
 
 .container-figure {
