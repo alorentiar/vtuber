@@ -444,13 +444,14 @@ footer {
 /* NENDOROID */
 
 .container-nendoroid {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
-  height: 18vh;
+  height: fit-content;
   max-width: 100%;
   align-items: center;
   background-color: #ffffff;
   position: relative;
+  padding-top: 120px;
 }
 
 .nendoroid {
@@ -481,10 +482,9 @@ footer {
 }
 
 .card {
-  flex-wrap: wrap;
   margin: 20px;
   height: fit-content;
-  width: 25vw;
+  width: 500px;
   justify-content: center;
   background-color: var(--sec-color);
   border-radius: 20px;
@@ -499,7 +499,7 @@ footer {
 }
 
 .card-image img {
-  width: 22vw;
+  width: 400px;
   height: auto;
   /* height: 50vh; */
   display: block;
@@ -535,7 +535,7 @@ footer {
 /* FIGURE */
 
 .container-figure {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   height: fit-content;
   max-width: 100%;
