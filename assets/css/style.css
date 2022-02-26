@@ -24,6 +24,7 @@ navbar {
   justify-content: space-between;
   background-color: #ffffff;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
 .menu-style {
@@ -81,25 +82,18 @@ navbar {
 }
 
 .debut {
-  width: 100vw;
-  height: 70vh;
-  padding-left: 5%;
+  width: 90vw;
+  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
 }
 .debut-video {
-  height: 100%;
-  right: 5%;
+  min-width: 80%;
+  height: auto;
+  right: 0;
   aspect-ratio: 16/9;
   position: absolute;
-}
-
-.debut-video video {
-  height: 75vh;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  box-shadow: -20px 20px var(--sec-color);
 }
 
 .debut-text {
@@ -129,8 +123,7 @@ navbar {
 /* INI UNTUK AUDITION */
 
 .square {
-  /* background-color: white; */
-  height: 70vh;
+  height: 80vh;
   position: relative;
   width: 100vw;
 }
@@ -209,21 +202,21 @@ footer {
   background-color: var(--sec-color);
   height: auto;
   width: 100%;
-  justify-content: space-between;
+  padding: 20px 5%;
   align-items: center;
   display: flex;
+  justify-content: space-between;
   color: white;
-}
-.copyright {
-  padding-left: 10pt;
 }
 
 .socialmedia {
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .sosialmedia img {
-  height: 41pt;
+  height: 40pt;
   width: 40pt;
 }
 
