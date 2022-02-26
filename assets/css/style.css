@@ -84,10 +84,12 @@ navbar {
 .debut {
   width: 90vw;
   height: 100vh;
+  margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center;
 }
+
 .debut-video {
   min-width: 80%;
   height: auto;
@@ -207,6 +209,7 @@ footer {
   display: flex;
   justify-content: space-between;
   color: white;
+  /* position: relative; */
 }
 
 .socialmedia {
@@ -222,24 +225,40 @@ footer {
 
 /* INI UNTUK EVENTS */
 .events {
-  padding: 0 5%;
+  max-width: 90vw;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+.events > p{
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--sec-color);
+
+}
+.slider {
+  margin-top: 30px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+.card-event{
+  max-width: 30vw;
   height: auto;
 }
-
-.slider {
-  display: grid;
-  column-gap: 50px;
-  grid-template-columns: auto auto auto;
-  margin-top: 32px;
-}
-
+ 
 .image-event {
-  max-width: 100%;
+  /* width: 100%; */
   height: auto;
 }
 
 .image-event img {
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
