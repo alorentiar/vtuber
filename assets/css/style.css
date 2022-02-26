@@ -787,17 +787,23 @@ footer {
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
-  width: 21.4vw;
+  width: 300px;
 }
 
 .customer-information-card {
-  display: flex;
-  flex-direction: row;
   background-color: var(--sec-color);
-  height: 69vh;
+  height: fit-content;
   width: 60vw;
   border-radius: 20px;
   padding: 4%;
+}
+
+.customer-information-card-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 69vh;
+  flex-direction: row;
 }
 
 .customer-information-card h2 {
@@ -826,7 +832,7 @@ footer {
 }
 
 .payment-vertical-line {
-  height: 90%;
+  height: 80%;
   border-right: 1px solid #ffffff;
   margin: auto 0px;
 }
