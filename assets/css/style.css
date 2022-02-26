@@ -237,12 +237,30 @@ footer {
   color: var(--sec-color);
 }
 .slider {
-  margin-top: 30px;
+  width: 80vw;
+  height: 70vh;
+  overflow: hidden;
+  text-align: center;
+
+  /* margin-top: 30px;
   display: flex;
   position: relative;
   box-sizing: border-box;
   justify-content: space-between;
-  gap: 1vw;
+  gap: 1vw; */
+}
+
+.slider > .slides {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  float: left;
+  list-style-type: none;
 }
 
 .card-event {
@@ -621,7 +639,7 @@ footer {
 /* VERTICAL LINE */
 .vertical-line {
   height: 80%;
-  border-right: 1px solid #000900;
+  border-right: 1px solid #000000;
   margin: auto 0px;
 }
 
@@ -697,11 +715,13 @@ footer {
   height: 100vh;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .customer-information-forms {
   /* display: flex; */
-  /* margin: auto; */
+  margin: 0px auto;
   /* justify-content: flex-start; */
   height: fit-content;
 }
@@ -723,9 +743,8 @@ footer {
 .customer-information-card {
   display: flex;
   flex-direction: row;
-  margin: auto;
   background-color: var(--sec-color);
-  height: fit-content;
+  height: 69vh;
   width: 60vw;
   border-radius: 20px;
   padding: 4%;
@@ -754,4 +773,27 @@ footer {
   flex-direction: row;
   width: 200px;
   justify-content: space-between;
+}
+
+.payment-vertical-line {
+  height: 90%;
+  border-right: 1px solid #ffffff;
+  margin: auto 0px;
+}
+
+.payment-buy {
+  background-color: var(--main-sec-color);
+  border-radius: 10px;
+  height: 7%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 90% auto;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.payment-buy a {
+  color: white;
 }
