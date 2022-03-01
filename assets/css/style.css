@@ -286,8 +286,7 @@ footer {
   text-align: center;
 }
 
-
-.content-wrap{
+.content-wrap {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -299,7 +298,6 @@ footer {
   flex-direction: row;
   background-color: blue;
 }
-
 
 .img-vtuber img {
   border-radius: 40px;
@@ -413,7 +411,6 @@ footer {
   width: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
 }
-
 
 /* NENDOROID */
 
@@ -842,4 +839,17 @@ footer {
 
 :root {
   --alpha: 0.8;
+}
+
+.container-canvas {
+  width: 100vw;
+  height: auto;
+}
+
+#myScreenSaver {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: inherit;
+  border: solid 1px black;
 }

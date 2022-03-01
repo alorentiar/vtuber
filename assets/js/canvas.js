@@ -2,18 +2,24 @@ const canvas = document.getElementById("myScreenSaver");
 const ctx = canvas.getContext("2d");
 const image = new Image();
 
-image.src = "./img-needed/vtube.png";
+ctx.canvas.height = window.innerWidth;
+ctx.canvas.width = window.innerHeight;
+
+image.src = "./assets/images/vtube.png";
 
 image.onload = () => {
-  ctx.drawImage(image, 0, 0, 400, 400);
+  image.height = "50px";
+  image.width = "50px";
+  ctx.drawImage(image, 100, 100);
 };
 
 var x = 0;
 var y = 0;
 
 function draw() {
-  ctx.clear(0, 0, canvas.height, canvas.width);
-  ctx.drawImage(x, y, 200, 200);
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  //   ctx.fillRect(x, y, 200, 200);
+  ctx.drawImage(image, x, y);
 
   if (x <= 0) {
     controlX = 1;
@@ -32,3 +38,4 @@ function draw() {
 
   window.requestAnimationFrame(draw);
 }
+window.requestAnimationFrame(draw);
