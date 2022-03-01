@@ -863,4 +863,9 @@ footer {
   left: 0px;
   top: 0px;
   display: none;
+  /* background-color: black; */
+}
+
+:root {
+  --alpha: 0.8;
 }
