@@ -286,29 +286,20 @@ footer {
   text-align: center;
 }
 
-.categories {
-  width: 100vw;
-  height: fit-content;
-}
 
-.container-vtuber {
+.content-wrap{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
 }
 
 .container-category {
   display: flex;
   flex-direction: row;
   background-color: blue;
-  padding: 10px;
 }
 
-.vtuber {
-  width: fit-content;
-  height: fit-content;
-  margin: 50px;
-}
 
 .img-vtuber img {
   border-radius: 40px;
@@ -326,10 +317,6 @@ footer {
 
 .container-vtuber {
   justify-content: center;
-}
-
-.region h2 {
-  margin-left: 50px;
 }
 
 .top-talent {
@@ -400,19 +387,22 @@ footer {
   object-fit: cover;
 }
 
+.region {
+  width: 90vw;
+  margin: 0 auto;
+  /* margin-top: 100px; */
+}
+
 .categories-header {
   display: flex;
   background-color: var(--sec-color);
   color: white;
   height: 12vh;
-  width: 90%;
+  width: 100%;
   border-radius: 20px;
-  text-align: center;
   align-items: center;
   justify-content: center;
   margin: 30px 0px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .categories-content img {
@@ -424,22 +414,6 @@ footer {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
 }
 
-.categories-content table {
-  text-align: center;
-  border-collapse: separate;
-  border-spacing: 100px 15px;
-}
-
-.categories-table {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
-  margin-top: 20px;
-}
-
-.categories-content h2 {
-  margin-left: 5%;
-}
 
 /* NENDOROID */
 
