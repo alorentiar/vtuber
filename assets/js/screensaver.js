@@ -1,4 +1,4 @@
-var cursortimeout;
+var cursortimeout = 100;
 var ss_active = false;
 
 document.getElementById("mydiv").onmousemove = cekmouse;
@@ -22,15 +22,6 @@ function show_ss() {
 }
 
 function show_animation() {
-  // if (screensaver_active) {
-  //     $("#screensaver").animate({
-  //       backgroundColor: changeColor()}, screensaver_animation);
-  //   }
-  // if(ss_active){
-  //     $("#screensaver").animate(
-  //         {backgroundColor: "#ffffff"},show_animation
-  //     );
-  // }
   const canvas = document.getElementById("myScreenSaver");
   const ctx = canvas.getContext("2d");
   const image = new Image();

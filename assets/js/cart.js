@@ -27,6 +27,7 @@ for (let a = 0; a < carts.length; a++) {
   carts[a].addEventListener("click", () => {
     // console.log("Added to cart!");
     addToCart(products[a]);
+    totalPrice(products[a]);
   });
 }
 
@@ -49,13 +50,13 @@ function setProduct(product) {
   //   product.inCart = 1;
 
   if (cartItems != null) {
-    cartItems[product.tag].inCart += 1;
     if (cartItems[product.tag] == undefined) {
       cartItems = {
         ...cartItems,
         [product.tag]: product,
       };
     }
+    cartItems[product.tag].inCart += 1;
   } else {
     product.inCart = 1;
     cartItems = {
