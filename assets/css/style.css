@@ -833,4 +833,22 @@ footer {
   left: 0px;
   top: 0px;
   display: none;
+  /* background-color: black; */
+}
+
+:root {
+  --alpha: 0.8;
+}
+
+.container-canvas {
+  width: 100vw;
+  height: auto;
+}
+
+#myScreenSaver {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: inherit;
+  border: solid 1px black;
 }
