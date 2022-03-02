@@ -18,7 +18,7 @@ let products = [
   {
     name: "Inugami Korone",
     tag: "inugami",
-    price: 50.99,
+    price: 50,
     inCart: 0,
   },
 ];
@@ -69,4 +69,15 @@ function setProduct(product) {
   //   };
 
   localStorage.setItem("productInCart", JSON.stringify(cartItems));
+}
+
+function totalPrice(product) {
+  let totalCartPrice = localStorage.getItem("TotalCost");
+
+  if (totalCartPrice != null) {
+    totalCartPrice = parseInt(totalCartPrice);
+    localStorage.setItem("TotalCost", totalCartPrice + product.price);
+  } else {
+    localStorage.setItem("TotalCost", product.price);
+  }
 }
