@@ -1,42 +1,26 @@
-var cursortimeout;
-var ss_active = false;
+let mousetimeout; // VARIABLE UNTUK MENYIMPAN TIMEOUT
+let timeout_active = true; // VARIABEL BOOLEAN BIAR TAU DIA ITU LAGI AKTIF ATAU ENGGA TIMEOUTNYA
 
-$(document).mousemove(function(){
-    clearTimeout(cursortimeout);
-    if(ss_active){
-        stop_ss();
-    }
-    cursortimeout = setTimeout(show_ss, 1000);
-})
-
-function show_ss(){
-    $("#screensaver").fadeIn();
-    ss_active = true;
-    show_animation();
-}
-
-function show_animation(){
-    if (screensaver_active) {
-        $("#screensaver").animate({
-          backgroundColor: changeColor()}, screensaver_animation);
-      }
-    // if(ss_active){
-    //     $("#screensaver").animate(
-    //         {backgroundColor: "#ffffff"},show_animation
-    //     );
-    // }
-}
-function changeColor(){
-    myColor = "rgb("+ randomNumber() + ", " + randomNumber() + ", " + randomNumber() + ")";
-    return myColor;
+// BUAT CEK APA ADA MOUSE YG GERAK
+$(document).mousemove(function () {
+  console.log("mousemove aman"); // BUAT DEBUG
+  clearTimeout(mousetimeout);
+  if (timeout_active) {
+    stop_object(); // KALO DIA TERDETEKJSI ADA PERGERAKAN MAKA DI STOP DULU
   }
-  function randomNumber() {
-    return Math.floor(Math.random() * 256);
-  }
+  mousetimeout = setTimeout(show_object, 2000); //NANTI TIMEOUTNYA 2000ms atau 2 detik
+});
 
-function stop_ss(){
-    $("#screensaver").fadeOut();
-    ss_active = false;
+// BUAT NGESHOW OBJECT SCREENSAVER KITA
+function show_object() {
+  console.log("show object aman"); // DEBUG
+  $("#screensaver").fadeIn(); // BIAR BISA MASUK TERUS DI KASIH FADE IN BIAR AGAK BAGUS DIKIT
+  timeout_active = true; // UBAH KE STATE DIMANA OBJECT KITA LAGI AKTIF
 }
 
-
+// BUAT NGESTOP OBJECT SCREENSAVER KITA
+function stop_object() {
+  console.log("stop object aman"); //DEBUG
+  $("#screensaver").fadeOut(0); // BIAR BISA KELUAR TRS AGAK BAGUS DIKIT KASIH FADE OUT
+  timeout_active = false; // UBAH KE STATE DIMANA OBJECT KITA LAGI GA AKTIF
+}
