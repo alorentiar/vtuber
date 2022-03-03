@@ -47,7 +47,8 @@ function addToCart(product) {
 function setProduct(product) {
   let cartItems = localStorage.getItem("productInCart");
   cartItems = JSON.parse(cartItems);
-  //   product.inCart = 1;
+
+  // console.log("tes");
 
   if (cartItems != null) {
     if (cartItems[product.tag] == undefined) {
@@ -84,6 +85,7 @@ function totalPrice(product) {
 
 function displayCart() {
   let cartItems = localStorage.getItem("productInCart");
+  let totalCartPrice = localStorage.getItem("TotalCost");
 
   cartItems = JSON.parse(cartItems);
 
@@ -112,11 +114,15 @@ function displayCart() {
       `;
     });
   }
+
+  if (priceContainer) {
+    document.querySelector(".shopping-sum-totalOrder span").textContent = totalCartPrice;
+  }
 }
 
 function deleteData(item) {
   let tempItem = localStorage.getItem("productInCart");
-  console.log("aaa");
+  console.log("testt delete");
   // if (tempItem == item) {
   // }
 }

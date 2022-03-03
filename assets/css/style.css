@@ -288,8 +288,6 @@ footer {
   text-align: center;
 }
 
-
-
 .content-wrap {
   display: flex;
   flex-direction: row;
@@ -303,7 +301,7 @@ footer {
   background-color: blue;
 }
 
-.vtuber{
+.vtuber {
   max-width: 20vw;
 }
 
@@ -323,7 +321,7 @@ footer {
   /* padding: 5%; */
 }
 
-.top-talent > p{
+.top-talent > p {
   font-size: 3vw;
   font-weight: bold;
 }
@@ -859,7 +857,7 @@ footer {
 
 .ss-wrap {
   width: 100vw;
-  height: 500vh;
+  height: fit-content;
   position: absolute;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);
@@ -868,17 +866,11 @@ footer {
 }
 
 .container-canvas {
-<<<<<<< HEAD
-  width: 100vw;
-  height: 500vh;
-  position: absolute;
-=======
   /* overflow: hidden; */
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
->>>>>>> 6a1b8134cf423077252deebccd9cce0d85cb62da
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);
   /* border: 1px solid red; */
@@ -891,7 +883,6 @@ footer {
   display: block;
   /* border: 1px solid black; */
 }
-
 
 @media only screen and (max-width: 600px) {
   .debut-video {
@@ -961,26 +952,25 @@ footer {
     margin-top: 20px;
   }
 
-
   /* TALENT */
 
-  .top-talent{
+  .top-talent {
     height: 80vh;
     align-items: center;
     justify-content: center;
     /* position: absolute; */
     /* margin: 0 auto; */
   }
-  .top-talent-content{
+  .top-talent-content {
     display: flex;
     flex-direction: column;
-    align-items:stretch;
+    align-items: stretch;
     height: 100%;
     gap: 50px;
     bottom: 0;
   }
 
-  .text-talent{
+  .text-talent {
     padding: 0;
     margin: 0;
     width: 100%;
@@ -989,19 +979,19 @@ footer {
     gap: 50px;
   }
 
-  .talent-image{
+  .talent-image {
     height: 30vh;
     width: auto;
   }
 
-  .ctg-talent > p{
+  .ctg-talent > p {
     font-size: 16px;
   }
 
-  .header-talent{
+  .header-talent {
     font-size: 36px;
   }
-  .body-talent{
+  .body-talent {
     font-size: 16px;
   }
 
