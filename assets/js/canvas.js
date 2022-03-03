@@ -5,6 +5,9 @@ const image = new Image();
 ctx.canvas.height = window.innerWidth;
 ctx.canvas.width = window.innerHeight;
 
+canvas.width = 1080;
+canvas.height = 720;
+
 image.src = "./assets/images/vtube.png";
 
 image.onload = () => {
