@@ -1,78 +1,26 @@
-var cursortimeout = 100;
-var ss_active = false;
+let mousetimeout; // VARIABLE UNTUK MENYIMPAN TIMEOUT
+let timeout_active = true; // VARIABEL BOOLEAN BIAR TAU DIA ITU LAGI AKTIF ATAU ENGGA TIMEOUTNYA
 
-document.getElementById("mydiv").onmousemove = cekmouse;
-var counter = 0;
-function cekmouse() {
-  clearTimeout(cursortimeout);
-  if (ss_active) {
-    stop_ss();
+// BUAT CEK APA ADA MOUSE YG GERAK
+$(document).mousemove(function () {
+  console.log("mousemove aman"); // BUAT DEBUG
+  clearTimeout(mousetimeout);
+  if (timeout_active) {
+    stop_object(); // KALO DIA TERDETEKJSI ADA PERGERAKAN MAKA DI STOP DULU
   }
-  cursortimeout = setTimeout(show_ss, 1000);
+  mousetimeout = setTimeout(show_object, 2000); //NANTI TIMEOUTNYA 2000ms atau 2 detik
+});
+
+// BUAT NGESHOW OBJECT SCREENSAVER KITA
+function show_object() {
+  console.log("show object aman"); // DEBUG
+  $("#screensaver").fadeIn(); // BIAR BISA MASUK TERUS DI KASIH FADE IN BIAR AGAK BAGUS DIKIT
+  timeout_active = true; // UBAH KE STATE DIMANA OBJECT KITA LAGI AKTIF
 }
 
-// mousemove(function () {
-
-// });
-
-function show_ss() {
-  $("#screensaver").fadeIn();
-  ss_active = true;
-  show_animation();
-}
-
-function show_animation() {
-  const canvas = document.getElementById("myScreenSaver");
-  const ctx = canvas.getContext("2d");
-  const image = new Image();
-
-  ctx.canvas.height = window.innerWidth;
-  ctx.canvas.width = window.innerHeight;
-
-  image.src = "./assets/images/vtube.png";
-
-  image.onload = () => {
-    image.height = "50px";
-    image.width = "50px";
-    ctx.drawImage(image, 100, 100);
-  };
-
-  var x = 0;
-  var y = 0;
-
-  function draw() {
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    //   ctx.fillRect(x, y, 200, 200);
-    ctx.drawImage(image, x, y);
-
-    if (x <= 0) {
-      controlX = 1;
-    } else if (x >= canvas.width - 100) {
-      controlX = -1;
-    }
-
-    if (y <= 0) {
-      controlY = 1;
-    } else if (y >= canvas.height - 100) {
-      controlY = -1;
-    }
-
-    x = x + controlX;
-    y = y + controlY;
-
-    window.requestAnimationFrame(draw);
-  }
-  window.requestAnimationFrame(draw);
-}
-// function changeColor(){
-//     myColor = "rgb("+ randomNumber() + ", " + randomNumber() + ", " + randomNumber() + ")";
-//     return myColor;
-//   }
-//   function randomNumber() {
-//     return Math.floor(Math.random() * 256);
-//   }
-
-function stop_ss() {
-  $("#screensaver").fadeOut();
-  ss_active = false;
+// BUAT NGESTOP OBJECT SCREENSAVER KITA
+function stop_object() {
+  console.log("stop object aman"); //DEBUG
+  $("#screensaver").fadeOut(0); // BIAR BISA KELUAR TRS AGAK BAGUS DIKIT KASIH FADE OUT
+  timeout_active = false; // UBAH KE STATE DIMANA OBJECT KITA LAGI GA AKTIF
 }

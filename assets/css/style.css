@@ -288,65 +288,65 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-  .debut-video{
+  .debut-video {
     width: 100%;
     /* align-items: center; */
     display: flex;
     position: relative;
     justify-content: center;
   }
-  .debut{
+  .debut {
     display: flex;
     flex-direction: column;
     height: 50vh;
   }
-  .debut-text{
+  .debut-text {
     position: relative;
     /* font-size: 6rem; */
     width: 80%;
     margin: 0 auto;
   }
-  .debut-text p{
+  .debut-text p {
     font-size: 9vw;
   }
 
-  .square{
+  .square {
     display: flex;
     flex-direction: column;
     height: fit-content;
   }
 
-  .square > img{
+  .square > img {
     margin: 0 auto;
     position: relative;
   }
 
-  .audition{
+  .audition {
     height: 40vh;
     border-radius: 0 100px 0 0;
     position: relative;
   }
 
-  .desc-audition{
+  .desc-audition {
     width: 100%;
   }
 
-  .header-audition{
+  .header-audition {
     font-size: 2rem;
   }
 
-  .p-audition{
+  .p-audition {
     font-size: 0.8rem;
   }
 
-  .events{
+  .events {
     height: fit-content;
   }
-  .events p{
+  .events p {
     font-size: 3rem;
   }
 
-  .slider{
+  .slider {
     margin-top: 20px;
   }
 }
@@ -892,28 +892,17 @@ footer {
 /* SCREENSAVER */
 
 #screensaver {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
-  left: 0px;
-  top: 0px;
-  display: none;
-  /* background-color: black; */
-}
-
-:root {
-  --alpha: 0.8;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .container-canvas {
   width: 100vw;
-  height: auto;
-}
-
-#myScreenSaver {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: inherit;
-  border: solid 1px black;
+  height: 100vh;
+  position: absolute;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
 }
