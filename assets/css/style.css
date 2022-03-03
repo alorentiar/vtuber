@@ -319,6 +319,9 @@ footer {
   .square > img{
     margin: 0 auto;
     position: relative;
+    /* height: 20vh; */
+    height: 50vh;
+    width: auto;
   }
 
   .audition{
