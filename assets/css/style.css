@@ -12,6 +12,7 @@
   font-family: "Poppins";
   box-sizing: border-box;
   text-decoration: none;
+  /* overflow-x: hidden; */
 }
 
 navbar {
@@ -287,69 +288,7 @@ footer {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-  .debut-video {
-    width: 100%;
-    /* align-items: center; */
-    display: flex;
-    position: relative;
-    justify-content: center;
-  }
-  .debut {
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
-  }
-  .debut-text {
-    position: relative;
-    /* font-size: 6rem; */
-    width: 80%;
-    margin: 0 auto;
-  }
-  .debut-text p {
-    font-size: 9vw;
-  }
 
-  .square {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-  }
-
-  .square > img {
-    margin: 0 auto;
-    position: relative;
-  }
-
-  .audition {
-    height: 40vh;
-    border-radius: 0 100px 0 0;
-    position: relative;
-  }
-
-  .desc-audition {
-    width: 100%;
-  }
-
-  .header-audition {
-    font-size: 2rem;
-  }
-
-  .p-audition {
-    font-size: 0.8rem;
-  }
-
-  .events {
-    height: fit-content;
-  }
-  .events p {
-    font-size: 3rem;
-  }
-
-  .slider {
-    margin-top: 20px;
-  }
-}
 
 .content-wrap {
   display: flex;
@@ -364,13 +303,8 @@ footer {
   background-color: blue;
 }
 
-.img-vtuber img {
-  border-radius: 40px;
-  outline: 10px solid var(--main-color);
-  outline-offset: -5px;
-  height: 300px;
-  width: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+.vtuber{
+  max-width: 20vw;
 }
 
 .desc-vtuber {
@@ -389,14 +323,21 @@ footer {
   /* padding: 5%; */
 }
 
+.top-talent > p{
+  font-size: 3vw;
+  font-weight: bold;
+}
+
 .top-talent-content {
   margin-top: 30px;
   border-radius: 10px;
   border: 1px solid #bdbdbd;
-  height: 60vh;
-  padding: 5%;
+  height: 50vh;
+  padding: 50px;
   width: 100%;
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .ctg-talent {
@@ -406,6 +347,7 @@ footer {
 
 .text-talent {
   margin-left: 100px;
+  height: 100%;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -416,7 +358,7 @@ footer {
   background-color: #b31313;
   font-weight: bold;
   color: white;
-  font-size: large;
+  font-size: 20px;
   line-height: 200%;
   padding: 0 20px;
   border-radius: 5px;
@@ -427,7 +369,7 @@ footer {
 }
 
 .header-talent {
-  font-size: 4rem;
+  font-size: 52px;
   font-weight: bold;
 }
 
@@ -437,7 +379,7 @@ footer {
 }
 
 .talent-image {
-  max-height: 100%;
+  height: 100%;
   width: auto;
   /* float: left; */
   aspect-ratio: 1/1;
@@ -471,8 +413,8 @@ footer {
   border-radius: 40px;
   outline: 10px solid var(--main-color);
   outline-offset: -5px;
-  height: 300px;
-  width: auto;
+  height: auto;
+  width: 20vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
 }
 
@@ -915,18 +857,159 @@ footer {
 
 /* SCREENSAVER */
 
-#screensaver {
+.ss-wrap {
   width: 100vw;
   height: 500vh;
   position: absolute;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  /* border: 1px solid yellow; */
 }
 
 .container-canvas {
+<<<<<<< HEAD
   width: 100vw;
   height: 500vh;
   position: absolute;
+=======
+  /* overflow: hidden; */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+>>>>>>> 6a1b8134cf423077252deebccd9cce0d85cb62da
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);
+  /* border: 1px solid red; */
+}
+
+.ss {
+  /* overflow: hidden; */
+  height: 100%;
+  width: 100%;
+  display: block;
+  /* border: 1px solid black; */
+}
+
+
+@media only screen and (max-width: 600px) {
+  .debut-video {
+    width: 100%;
+    /* align-items: center; */
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  .debut {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+  }
+  .debut-text {
+    position: relative;
+    /* font-size: 6rem; */
+    width: 80%;
+    margin: 0 auto;
+  }
+  .debut-text p {
+    font-size: 9vw;
+  }
+
+  .square {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .square > img {
+    margin: 0 auto;
+    position: relative;
+    /* height: 20vh; */
+    height: 50vh;
+    width: auto;
+  }
+
+  .audition {
+    height: 40vh;
+    border-radius: 0 100px 0 0;
+    position: relative;
+  }
+
+  .desc-audition {
+    width: 100%;
+  }
+
+  .header-audition {
+    font-size: 2rem;
+  }
+
+  .p-audition {
+    font-size: 0.8rem;
+  }
+
+  .events {
+    height: fit-content;
+    /* overflow-y: hidden; */
+  }
+  .events p {
+    font-size: 3rem;
+  }
+
+  .slider {
+    height: auto;
+    margin-top: 20px;
+  }
+
+
+  /* TALENT */
+
+  .top-talent{
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    /* margin: 0 auto; */
+  }
+  .top-talent-content{
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    height: 100%;
+    gap: 50px;
+    bottom: 0;
+  }
+
+  .text-talent{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 50px;
+  }
+
+  .talent-image{
+    height: 30vh;
+    width: auto;
+  }
+
+  .ctg-talent > p{
+    font-size: 16px;
+  }
+
+  .header-talent{
+    font-size: 36px;
+  }
+  .body-talent{
+    font-size: 16px;
+  }
+
+  /* .vtuber{
+    width: 40vw;
+  } */
+
+  /* .categories-content img{
+    width: 40vw
+  } */
 }
