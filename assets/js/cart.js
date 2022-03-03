@@ -5,19 +5,19 @@ let carts = document.querySelectorAll(".tombol-beli");
 let products = [
   {
     name: "Nekomata Okayu",
-    tag: "nekomata",
+    tag: "NekomataOkayu",
     price: 48.99,
     inCart: 0,
   },
   {
     name: "Shiranui Flare",
-    tag: "shiranui",
+    tag: "ShiranuiFlare",
     price: 49.99,
     inCart: 0,
   },
   {
     name: "Inugami Korone",
-    tag: "inugami",
+    tag: "InugamiKorone",
     price: 50,
     inCart: 0,
   },
@@ -81,3 +81,44 @@ function totalPrice(product) {
     localStorage.setItem("TotalCost", product.price);
   }
 }
+
+function displayCart() {
+  let cartItems = localStorage.getItem("productInCart");
+
+  cartItems = JSON.parse(cartItems);
+
+  let productContainer = document.querySelector(".cart-object");
+  let priceContainer = document.querySelector(".shopping-sum-totalOrder");
+  console.log(cartItems);
+
+  if (cartItems && productContainer) {
+    productContainer.innerHTML = "";
+    Object.values(cartItems).map((item) => {
+      productContainer.innerHTML += `
+      <div class="card-cart-object">
+        <div class="card-cart-remove">
+          <button onclick="deleteData()"><img src="./assets/images/cancel.png" alt=""></button>
+        </div>
+        <div class="picture">
+          <img src="./assets/images/${item.tag}.png" alt="">
+        </div>
+        <div class="pic-cart-desc">
+          <p class="pic-cart-desc-head"><span>${item.name}</span></p>
+          <p class="pic-cart-desc-price">¥<span>${item.price}</span></p>
+          <p class="pic-cart-desc-type">Figure</p>
+          <p class="pic-cart-desc-inCart">X <span>${item.inCart}</span></p>
+        </div>
+      </div>
+      `;
+    });
+  }
+}
+
+function deleteData(item) {
+  let tempItem = localStorage.getItem("productInCart");
+  console.log("aaa");
+  // if (tempItem == item) {
+  // }
+}
+
+displayCart();

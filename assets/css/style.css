@@ -700,6 +700,24 @@ footer {
   margin: 20px;
 }
 
+.card-cart-remove button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  height: fit-content;
+}
+
+.card-cart-remove img {
+  width: 50px;
+  height: auto;
+  margin-top: 100px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
 .pic-cart-desc {
   color: white;
   display: flex;
@@ -715,6 +733,12 @@ footer {
 .pic-cart-desc-price {
   font-size: 3rem;
   font-weight: 1000;
+}
+
+.pic-cart-desc-inCart {
+  font-size: 1.2rem;
+  font-weight: 1000;
+  padding-top: 20px;
 }
 
 .pic-cart-desc-type {
@@ -893,7 +917,7 @@ footer {
 
 #screensaver {
   width: 100vw;
-  height: 100vh;
+  height: 500vh;
   position: absolute;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);
@@ -901,7 +925,7 @@ footer {
 
 .container-canvas {
   width: 100vw;
-  height: 100vh;
+  height: 500vh;
   position: absolute;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);

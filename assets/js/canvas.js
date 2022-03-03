@@ -1,9 +1,9 @@
 const canvas = document.getElementById("myScreenSaver");
 const ctx = canvas.getContext("2d");
 const image = new Image();
-
-ctx.canvas.height = window.innerWidth;
-ctx.canvas.width = window.innerHeight;
+// const scrollHeight = window.innerHeight * (window.innerHeight / document.body.offsetHeight);
+ctx.canvas.width = window.innerWidth;
+ctx.canvas.height = window.innerHeight;
 
 image.src = "./assets/images/vtube.png";
 
@@ -23,13 +23,13 @@ function draw() {
 
   if (x <= 0) {
     controlX = 1;
-  } else if (x >= canvas.width - 100) {
+  } else if (x >= ctx.canvas.width - 100) {
     controlX = -1;
   }
 
   if (y <= 0) {
     controlY = 1;
-  } else if (y >= canvas.height - 100) {
+  } else if (y >= ctx.canvas.height - 100) {
     controlY = -1;
   }
 
