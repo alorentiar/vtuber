@@ -125,6 +125,10 @@ function deleteData(item) {
   console.log("testt delete");
   // if (tempItem == item) {
   // }
+
+  // COBA COBA TAPI INI CLEAR SEMUA :D
+  localStorage.clear(); //ini clear semua kwkw
+  window.location.reload(); //ni buat autorefresh
 }
 
 displayCart();

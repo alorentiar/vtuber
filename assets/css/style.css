@@ -595,14 +595,14 @@ footer {
 
 .container-content {
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: row;
 }
 
 .figure-cart {
   width: 60vw;
-  height: 75vh;
+  height: fit-content;
   /* background-color: pink; */
   margin: auto;
 }
@@ -687,8 +687,8 @@ footer {
 
 /* VERTICAL LINE */
 .vertical-line {
-  height: 80%;
-  border-right: 1px solid #000000;
+  height: 100vh;
+  border-right: 2px solid #000000;
   margin: auto 0px;
 }
 
@@ -857,7 +857,7 @@ footer {
 
 .ss-wrap {
   width: 100vw;
-  height: fit-content;
+  height: 500vh;
   position: absolute;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);
