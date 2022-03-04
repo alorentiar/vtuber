@@ -473,12 +473,17 @@ footer {
   margin-bottom: 20px;
 }
 
+.picture img {
+  border-radius: 15px;
+}
+
 .card-image img {
   width: 400px;
   height: auto;
   /* height: 50vh; */
   display: block;
   margin: auto;
+  border-radius: 20px;
 }
 
 .card-desc {
@@ -607,6 +612,10 @@ footer {
   margin: auto;
 }
 
+.cart-object {
+  margin-bottom: 5vh;
+}
+
 .cart-object h1 {
   font-size: 3rem;
   margin-bottom: 30px;
@@ -640,6 +649,12 @@ footer {
   margin: 20px;
 }
 
+.card-cart-remove {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
 .card-cart-remove button {
   background-color: transparent;
   background-repeat: no-repeat;
@@ -648,14 +663,15 @@ footer {
   overflow: hidden;
   outline: none;
   height: fit-content;
+  vertical-align: middle;
+  margin-left: 2vw;
 }
 
 .card-cart-remove img {
   width: 50px;
   height: auto;
-  margin-top: 100px;
-  margin-left: 30px;
-  margin-right: 10px;
+  vertical-align: middle;
+  margin-right: 1vw;
 }
 
 .pic-cart-desc {
@@ -789,6 +805,21 @@ footer {
   width: 300px;
 }
 
+.male {
+  margin: 0px auto;
+}
+
+.female {
+  margin: 0px auto;
+}
+
+.female input {
+  margin: -21px;
+}
+.gender-form-input {
+  justify-content: flex-start;
+}
+
 .customer-information-card {
   background-color: var(--sec-color);
   height: fit-content;
@@ -850,6 +881,10 @@ footer {
 }
 
 .payment-buy a {
+  color: white;
+}
+
+.payment-buy input {
   color: white;
 }
 

@@ -6,19 +6,37 @@ let products = [
   {
     name: "Nekomata Okayu",
     tag: "NekomataOkayu",
-    price: 48.99,
+    price: 48.9,
     inCart: 0,
   },
   {
     name: "Shiranui Flare",
     tag: "ShiranuiFlare",
-    price: 49.99,
+    price: 49.9,
     inCart: 0,
   },
   {
     name: "Inugami Korone",
     tag: "InugamiKorone",
-    price: 50,
+    price: 50.9,
+    inCart: 0,
+  },
+  {
+    name: "Shimamura Charlotte",
+    tag: "ShimamuraCharlotte",
+    price: 51.9,
+    inCart: 0,
+  },
+  {
+    name: "Lize Helesta",
+    tag: "LizeHelesta",
+    price: 52.9,
+    inCart: 0,
+  },
+  {
+    name: "Minato Aqua",
+    tag: "MinatoAqua",
+    price: 53.9,
     inCart: 0,
   },
 ];
@@ -76,7 +94,7 @@ function totalPrice(product) {
   let totalCartPrice = localStorage.getItem("TotalCost");
 
   if (totalCartPrice != null) {
-    totalCartPrice = parseInt(totalCartPrice);
+    totalCartPrice = parseFloat(totalCartPrice);
     localStorage.setItem("TotalCost", totalCartPrice + product.price);
   } else {
     localStorage.setItem("TotalCost", product.price);
@@ -91,6 +109,8 @@ function displayCart() {
 
   let productContainer = document.querySelector(".cart-object");
   let priceContainer = document.querySelector(".shopping-sum-totalOrder");
+  let priceContainerFinal = document.querySelector(".container-payment");
+
   console.log(cartItems);
 
   if (cartItems && productContainer) {
@@ -98,9 +118,6 @@ function displayCart() {
     Object.values(cartItems).map((item) => {
       productContainer.innerHTML += `
       <div class="card-cart-object">
-        <div class="card-cart-remove">
-          <button onclick="deleteData()"><img src="./assets/images/cancel.png" alt=""></button>
-        </div>
         <div class="picture">
           <img src="./assets/images/${item.tag}.png" alt="">
         </div>
@@ -113,22 +130,33 @@ function displayCart() {
       </div>
       `;
     });
+    productContainer.innerHTML += `
+    <div class="card-cart-remove">
+      <button onclick="deleteData()"><img src="./assets/images/remove.png" alt=""> Delete All Cart</button>
+    </div>
+    `;
+  } else {
+    productContainer.innerHTML += `
+      <p>Cart is empty</p>
+    `;
   }
 
   if (priceContainer) {
+    // document.querySelector(".shopping-sum-totalOrder span").textContent = Math.round(totalCartPrice);
     document.querySelector(".shopping-sum-totalOrder span").textContent = totalCartPrice;
+  }
+
+  if (priceContainerFinal) {
+    document.querySelector(".payment-final span").textContent = totalCartPrice;
   }
 }
 
-function deleteData(item) {
-  let tempItem = localStorage.getItem("productInCart");
-  console.log("testt delete");
-  // if (tempItem == item) {
-  // }
+function deleteData() {
+  // let tempItem = localStorage.getItem("productInCart");
+  // console.log("testt delete");
 
-  // COBA COBA TAPI INI CLEAR SEMUA :D
-  localStorage.clear(); //ini clear semua kwkw
-  window.location.reload(); //ni buat autorefresh
+  localStorage.clear();
+  window.location.reload();
 }
 
 displayCart();

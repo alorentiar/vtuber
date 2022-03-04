@@ -39,12 +39,24 @@
             <div class="customer-information-card-container">
                 <div class="customer-information-forms">
                     <h2>Customer Information</h2>
-                    <form>
-                        Name <input type="text" placeholder="">
-                        Gender <input type="text" placeholder="">
-                        Email <input type="email" placeholder="">
-                        Phone <input type="text" placeholder="">
-                        Address <input type="text" placeholder="">
+                    <form action="#" method="POST" onsubmit="validate()">
+                        Name <input type="text" placeholder="Name" id="name">
+                        <div class="gender">
+                            Gender:
+                            <br>
+                            <div class="male">
+                                <label for="male" class="label">Male</label>
+                                <input type="radio" class="radio" name="gender" id="male" value="male">
+                            </div>
+                            <div class="female">
+                                <label for="female" class="label">Female</label>
+                                <input type="radio" class="radio" name="gender" id="female" value="female">
+                            </div>
+                        </div>
+                        Email <input type="email" placeholder="Email" id="email">
+                        Phone <input type="phone" placeholder="Phone" id="phone">
+                        Address <input type="text" placeholder="Address" id="address">
+                        <input type="submit" value="Process">
                     </form>
                 </div>
 
@@ -54,7 +66,7 @@
                     <h2>Payment</h2>
                     <div class="payment-total-payment">
                         Total Payment
-                        <h3>¥97.98</h3>
+                        <div class="payment-final">¥<span>0</span> </div>
                     </div>
 
                     <div class="payment-method">Payment Method</div>
@@ -85,6 +97,12 @@
             <img src="./assets/images/sosmed_4.png" alt="discord" />
         </div>
     </footer>
+
+
+
 </body>
+
+<script src="./assets/js/index.js"></script>
+<script src="./assets/js/cart.js"></script>
 
 </html>
