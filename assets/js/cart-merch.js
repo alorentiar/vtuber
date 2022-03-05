@@ -1,42 +1,77 @@
-// console.log("tesss");
 
 let carts = document.querySelectorAll(".tombol-beli");
 
 let products = [
   {
-    name: "Nekomata Okayu",
-    tag: "NekomataOkayu.png",
-    price: 48.9,
+    name: "Hakui Koyori T-Shirt",
+    tag: "HakuiKoyori_TShirt.jpg",
+    price: 20.8,
     inCart: 0,
   },
   {
-    name: "Shiranui Flare",
-    tag: "ShiranuiFlare.png",
-    price: 49.9,
+    name: "Kazama Iroha T-Shirt",
+    tag: "KazamaIroha_TShirt.jpg",
+    price: 20.8,
     inCart: 0,
   },
   {
-    name: "Inugami Korone",
-    tag: "InugamiKorone.png",
-    price: 50.9,
+    name: "Shion Maid T-Shirt",
+    tag: "ShionMaid_TShirt.jpg",
+    price: 20.8,
     inCart: 0,
   },
   {
-    name: "Shimamura Charlotte",
-    tag: "ShimamuraCharlotte.png",
-    price: 51.9,
+    name: "Usada Pekora T-Shirt",
+    tag: "UsadaPekora_TShirt.jpg",
+    price: 20.8,
     inCart: 0,
   },
   {
-    name: "Lize Helesta",
-    tag: "LizeHelesta.png",
-    price: 52.9,
+    name: "Omaru Polka T-Shirt",
+    tag: "OmaruPolka_TShirt.jpg",
+    price: 20.8,
     inCart: 0,
   },
   {
-    name: "Minato Aqua",
-    tag: "MinatoAqua.png",
-    price: 53.9,
+    name: "Sakamata Chloe T-Shirt",
+    tag: "SakamataChloe_TShirt.jpg",
+    price: 20.8,
+    inCart: 0,
+  },
+  {
+    name: "Kiryu Coco Poster",
+    tag: "KiryuCoco_Poster.jpg",
+    price: 12.9,
+    inCart: 0,
+  },
+  {
+    name: "Nekomata Okayu Poster",
+    tag: "NekomataOkayu_Poster.jpg",
+    price: 12.9,
+    inCart: 0,
+  },
+  {
+    name: "Nijisan Poster",
+    tag: "Nijisan_Poster.jpg",
+    price: 12.9,
+    inCart: 0,
+  },
+  {
+    name: "Rushia Poster",
+    tag: "Rushia_Poster.jpg",
+    price: 12.9,
+    inCart: 0,
+  },
+  {
+    name: "Sakura Miko Poster",
+    tag: "SakuraMiko_Poster.jpg",
+    price: 12.9,
+    inCart: 0,
+  },
+  {
+    name: "Shirakami Fubuki Poster",
+    tag: "ShirakamiFubuki_Poster.jpg",
+    price: 12.9,
     inCart: 0,
   },
 ];
@@ -65,8 +100,6 @@ function addToCart(product) {
 function setProduct(product) {
   let cartItems = localStorage.getItem("productInCart");
   cartItems = JSON.parse(cartItems);
-
-  // console.log("tes");
 
   if (cartItems != null) {
     if (cartItems[product.tag] == undefined) {
@@ -135,16 +168,12 @@ function displayCart() {
       <p>Cart is empty</p>
     `;
   }
-  // if(priceContainerFinal){
-  //   console.log(totalCartPrice);
-  // }
+
   document.querySelector(".shopping-sum-totalOrder span").textContent = totalCartPrice;
 
 }
 
 function deleteData() {
-  // let tempItem = localStorage.getItem("productInCart");
-  // console.log("testt delete");
 
   localStorage.clear();
   window.location.reload();
