@@ -810,18 +810,18 @@ footer {
 }
 
 .male {
-  /* margin: 0px auto; */
+  margin: 0px auto;
 }
 
 .female {
-  /* margin: 0px auto; */
+  margin: 0px auto;
 }
 
 .female input {
-  margin: -21px;
+  /* margin: -21px; */
 }
 .gender-form-input {
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
 }
 
 .customer-information-card {
