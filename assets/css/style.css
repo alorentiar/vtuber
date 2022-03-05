@@ -116,6 +116,10 @@ navbar {
   background-color: var(--sec-color);
 }
 
+/* RESPONSIVE NAVBAR */
+@media only screen and (max-width: 600px) {
+}
+
 /* .debut:after {
   content: "";
   position: absolute;
