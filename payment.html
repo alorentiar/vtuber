@@ -66,7 +66,7 @@
                     <h2>Payment</h2>
                     <div class="payment-total-payment">
                         Total Payment
-                        <div class="payment-final">¥<span>0</span> </div>
+                        <div class="shopping-sum-totalOrder">¥<span id="totalOrder">0</span></div>
                     </div>
 
                     <div class="payment-method">Payment Method</div>
@@ -74,10 +74,10 @@
                         <input type="radio" placeholder=""> Paypal
                         <input type="radio" placeholder=""> Skrill
                     </form>
-
                     <div class="payment-buy">
                         <a href="./index.html">Process</a>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -100,9 +100,13 @@
 
 
 
+    <script src="./assets/js/cart.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script>
+        document.getElementById("totalOrder").innerHTML=localStorage.getItem("TotalCost");
+    </script>
+
 </body>
 
-<script src="./assets/js/cart.js"></script>
-<script src="./assets/js/index.js"></script>
 
 </html>
