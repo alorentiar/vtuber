@@ -289,6 +289,7 @@ footer {
 }
 
 /* INI UNTUK EVENTS */
+/* NEW SLIDER */
 .events {
   max-width: 90vw;
   height: auto;
@@ -301,56 +302,14 @@ footer {
   font-weight: bold;
   color: var(--sec-color);
 }
+
 .slider {
-  width: 80vw;
-  height: 70vh;
+  width: 90vw;
+  height: 80vh;
   overflow: hidden;
   text-align: center;
-
-  /* margin-top: 30px;
-  display: flex;
-  position: relative;
-  box-sizing: border-box;
-  justify-content: space-between;
-  gap: 1vw; */
 }
 
-.slider > .slides {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.slide {
-  float: left;
-  list-style-type: none;
-}
-
-.card-event {
-  max-width: 30vw;
-  height: auto;
-}
-
-.image-event {
-  /* width: 100%; */
-  height: auto;
-}
-
-.image-event img {
-  /* max-width: 100%; */
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.text-event {
-  margin: 10px 0;
-  text-align: center;
-}
-
-/* NEW SLIDER */
 .container-slider {
   display: flex;
   align-items: center;
@@ -395,6 +354,11 @@ footer {
   height: auto;
   object-fit: cover;
   border-radius: 20px;
+}
+
+.slide p {
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
 .slide.active {
