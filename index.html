@@ -18,25 +18,35 @@
 <body>
   <!-- NAVBAR + HEADER -->
   <div class="container">
-    <div id="screensaver" class="ss-wrap">
+    <!-- <div id="screensaver" class="ss-wrap">
       <div class="container-canvas">
         <canvas id="myScreenSaver" class="ss"></canvas>
       </div>
-    </div>
+    </div> -->
+    
     <navbar>
-      <!-- logo -->
-      <img src="./assets/images/vtube.png" class="icon" />
-      <!-- menu -->
-      <div class="menu">
-        <ul>
-          <li class="menu-child-active"><a href="./index.html" target="_blank" class="menu-style-active">Home</a></li>
-          <li class="menu-child"><a href="./talent.html" target="_blank" class="menu-style">Talents</a></li>
-          <li class="menu-child"><a href="./figure.html" target="_blank" class="menu-style">Figure</a></li>
-          <li class="menu-child"><a href="./nendoroid.html" target="_blank" class="menu-style">Merchandise</a></li>
-          <li class="menu-child"><a href="./cart.html" target="_blank" class="menu-style">Cart</a></li>
-        </ul>
+      <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-head  er">
+          <img src="./assets/images/vtube.png" class="icon" />
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <div class="nav-links">
+          <a href="./index.html" target="_blank" class="menu-style page">Home</a>
+          <a href="./talent.html" target="_blank" class="menu-style">Talents</a>
+          <a href="./figure.html" target="_blank" class="menu-style">Figure</a>
+          <a href="./nendoroid.html" target="_blank" class="menu-style">Merchandise</a>
+          <a href="./cart.html" target="_blank" class="menu-style">Cart</a>
+        </div>
       </div>
     </navbar>
+    
     <div class="debut">
       <video autoplay muted loop src="./assets/images/videoplayback.mp4" class="debut-video"></video>
       <div class="debut-text">
@@ -46,7 +56,7 @@
   </div>
 
   <!-- end navbar+header -->
-  <div class="shopping-sum-totalOrder">¥<span>0</span></div>
+  <!-- <div class="shopping-sum-totalOrder">¥<span>0</span></div> -->
   <!-- vtuber audition -->
   <div class="container" style="background-color: rgb(240, 240, 240); height: fit-content;">
     <div class="square">
