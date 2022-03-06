@@ -55,7 +55,7 @@
   margin: 0 auto; */
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .nav > .nav-btn {
     display: flex;
   }
@@ -68,7 +68,8 @@
     margin: 0 auto;
     padding: 10px;
   }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
     background-color: rgb(255, 255, 255);
     /* box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2); */
     border: 1px solid #dbdbdb;
@@ -288,6 +289,7 @@ footer {
 }
 
 /* INI UNTUK EVENTS */
+/* NEW SLIDER */
 .events {
   max-width: 90vw;
   height: auto;
@@ -300,181 +302,119 @@ footer {
   font-weight: bold;
   color: var(--sec-color);
 }
+
 .slider {
-  width: 80vw;
-  height: 70vh;
+  width: 90vw;
+  height: 80vh;
   overflow: hidden;
   text-align: center;
-
-  /* margin-top: 30px;
-  display: flex;
-  position: relative;
-  box-sizing: border-box;
-  justify-content: space-between;
-  gap: 1vw; */
 }
 
-.slider > .slides {
-  display: block;
+.container-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: fit-content;
+}
+
+.slider-wrap {
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 2px;
+  border-radius: 30px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  width: 100%;
+  padding-top: 2%;
 }
 
 .slide {
-  float: left;
-  list-style-type: none;
-}
-
-.card-event {
-  max-width: 30vw;
-  height: auto;
-}
-
-.image-event {
-  /* width: 100%; */
-  height: auto;
-}
-
-.image-event img {
-  /* max-width: 100%; */
   width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.text-event {
-  margin: 10px 0;
-  text-align: center;
-}
-
-.content-wrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-
-.container-category {
-  display: flex;
-  flex-direction: row;
-  background-color: blue;
-}
-
-.vtuber {
-  max-width: 20vw;
-}
-
-.desc-vtuber {
-  justify-content: center;
-  text-align: center;
-}
-
-.container-vtuber {
-  justify-content: center;
-}
-
-.top-talent {
-  width: 90vw;
-  margin: 0 auto;
-  box-sizing: border-box;
-  /* padding: 5%; */
-}
-
-.top-talent > p {
-  font-size: 3vw;
-  font-weight: bold;
-}
-
-.top-talent-content {
-  margin-top: 30px;
-  border-radius: 10px;
-  border: 1px solid #bdbdbd;
-  height: 50vh;
-  padding: 50px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.ctg-talent {
-  display: flex;
-  gap: 20px;
-}
-
-.text-talent {
-  margin-left: 100px;
   height: 100%;
-  width: 60%;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.ctg-talent p {
-  background-color: #b31313;
-  font-weight: bold;
-  color: white;
-  font-size: 20px;
-  line-height: 200%;
-  padding: 0 20px;
-  border-radius: 5px;
-}
-
-.talent-content {
-  margin-top: 20px;
-}
-
-.header-talent {
-  font-size: 52px;
-  font-weight: bold;
-}
-
-.body-talent {
-  font-size: 1.2rem;
-  line-height: 200%;
-}
-
-.talent-image {
-  height: 100%;
-  width: auto;
-  /* float: left; */
-  aspect-ratio: 1/1;
-  /* border: 1px solid red; */
-}
-
-.talent-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.region {
-  width: 90vw;
-  margin: 0 auto;
-}
-
-.categories-header {
-  display: flex;
-  background-color: var(--sec-color);
-  color: white;
-  height: 12vh;
-  width: 100%;
-  border-radius: 20px;
   align-items: center;
   justify-content: center;
-  margin: 30px 0px;
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  background-color: #f0f0f0;
+  transition: 0.5s;
+  opacity: 0;
 }
 
-.categories-content img {
-  border-radius: 40px;
-  outline: 10px solid var(--main-color);
-  outline-offset: -5px;
+.slide img {
+  width: 55vw;
   height: auto;
-  width: 20vw;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.slide p {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.buttonControl {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: #333;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#controlPrev {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#controlNext {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#controlPrev::after,
+#controlNext::after {
+  content: "";
+  position: absolute;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 40%;
+  height: 40%;
+}
+
+@media screen and (max-width: 700px) {
+  .buttonControl {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+#controlNext::after {
+  top: 50%;
+  right: 50%;
+  transform: translate(25%, -50%) rotate(-45deg);
+}
+
+#controlPrev::after {
+  top: 50%;
+  right: 50%;
+  transform: translate(75%, -50%) rotate(135deg);
 }
 
 /* NENDOROID */
