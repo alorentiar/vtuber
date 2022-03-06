@@ -434,9 +434,61 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+  .container-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: fit-content;
+    margin: 50px;
+    padding: 0;
+  }
+
+  .slider-wrap {
+    width: 80vw;
+    height: 30vh;
+    margin: 2px;
+    border-radius: 30px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    position: absolute;
+    background-color: #f0f0f0;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .slide img {
+    width: 70vw;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
   .buttonControl {
     height: 40px;
     width: 40px;
+  }
+  .slide p {
+    font-size: 10px;
+    font-weight: 10;
+  }
+  .responsive-mini {
+    font-size: 20px;
+    font-weight: 10px;
   }
 }
 
