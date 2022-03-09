@@ -792,7 +792,8 @@ footer {
 }
 
 .container-content {
-  width: 100vw;
+  width: 90vw;
+  margin: 0 auto;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -801,8 +802,10 @@ footer {
 .figure-cart {
   width: 60vw;
   height: fit-content;
+  border-right: 1px solid var(--sec-color);
+  padding-right: 50px;
   /* background-color: pink; */
-  margin: auto;
+  margin: 0 auto;
 }
 
 .cart-object {
@@ -819,7 +822,7 @@ footer {
   display: flex;
   flex-direction: row;
   background-color: var(--sec-color);
-  margin: 20px;
+  margin: 50px 0;
   width: auto;
   height: fit-content;
   border-radius: 20px;
@@ -908,7 +911,7 @@ footer {
   width: 25vw;
   height: 75vh;
   /* background-color: pink; */
-  margin: auto;
+  margin: 0 auto;
 }
 
 .header-payment p {
@@ -961,6 +964,8 @@ footer {
 .buy a {
   color: white;
 }
+
+
 
 /* PAYMENT / CUSTOMER INFORMATION */
 /* .payment-vertical-line {
@@ -1225,11 +1230,27 @@ footer {
     font-size: 16px;
   }
 
-  /* .vtuber{
-    width: 40vw;
-  } */
+  .container-content{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .vertical-line{
+    display: none;
+  }
 
-  /* .categories-content img{
-    width: 40vw
-  } */
+  .figure-cart{
+    min-width: 100%;
+    border-right: none;
+  }
+
+  .payment-details{
+    border-top: 1px solid var(--sec-color);
+    width: 100%;
+    padding-top: 50px;
+  }
+  .pic-cart-desc-head{
+    font-size: 20px;
+  }
 }
