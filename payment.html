@@ -17,26 +17,26 @@
     <div class="container-header">
         <navbar>
             <div class="nav">
-              <input type="checkbox" id="nav-check">
-              <div class="nav-head  er">
-                <img src="./assets/images/vtube.png" class="icon" />
-              </div>
-              <div class="nav-btn">
-                <label for="nav-check">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </label>
-              </div>
-              <div class="nav-links">
-                <a href="./index.html" target="_blank" class="menu-style">Home</a>
-                <a href="./talent.html" target="_blank" class="menu-style">Talents</a>
-                <a href="./figure.html" target="_blank" class="menu-style">Figure</a>
-                <a href="./nendoroid.html" target="_blank" class="menu-style">Merchandise</a>
-                <a href="./cart.html" target="_blank" class="menu-style page">Cart</a>
-              </div>
+                <input type="checkbox" id="nav-check">
+                <div class="nav-head  er">
+                    <img src="./assets/images/vtube.png" class="icon" />
+                </div>
+                <div class="nav-btn">
+                    <label for="nav-check">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <div class="nav-links">
+                    <a href="./index.html" target="_blank" class="menu-style">Home</a>
+                    <a href="./talent.html" target="_blank" class="menu-style">Talents</a>
+                    <a href="./figure.html" target="_blank" class="menu-style">Figure</a>
+                    <a href="./nendoroid.html" target="_blank" class="menu-style">Merchandise</a>
+                    <a href="./cart.html" target="_blank" class="menu-style page">Cart</a>
+                </div>
             </div>
-          </navbar>
+        </navbar>
     </div>
 
     <!-- CONTENT  -->
@@ -45,48 +45,50 @@
             <div class="customer-information-card-container">
                 <div class="customer-information-forms">
                     <h2>Customer Information</h2>
-                    <form action="#" method="POST" onsubmit="validate()">
+                    <form action="validate()" method="POST" onsubmit="validate()">
                         Name <input type="text" placeholder="Name" id="name">
                         <div class="gender">
                             Gender:
                             <br>
-                            <div class="male">
-                                <input type="radio" class="radio" name="gender" id="male" value="male">
-                                <label for="male" class="label">Male</label>
+                            <div class="radio-choose">
+                                <input type="radio" name="gender" id="male" value="male">
+                                <label for="male" class="radio-label">Male</label>
+
                             </div>
-                            <div class="female">
-                                <input type="radio" class="radio" name="gender" id="female" value="female">
-                                <label for="female" class="label">Female</label>
+                            <div class="radio-choose">
+                                <input type="radio" name="gender" id="female" value="female">
+                                <label for="female" class="radio-label">Female</label>
                             </div>
                         </div>
                         Email <input type="email" placeholder="Email" id="email">
                         Phone <input type="phone" placeholder="Phone" id="phone">
                         Address <input type="text" placeholder="Address" id="address">
-                        <input type="submit" value="Submit Profile">
+
+                        <h2>Payment</h2>
+                        <div class="payment-total-payment">
+                            Total Payment
+                            <div class="shopping-sum-totalOrder">¥<span id="totalOrder">0</span></div>
+                        </div>
+
+                        <div class="payment-method">Payment Method</div>
+
+                        <div class="radio-choose">
+                            <input type="radio" name="gender" id="paypal" value="paypal">
+                            <label for="paypal" class="radio-label">Paypal</label>
+
+                        </div>
+                        <div class="radio-choose">
+                            <input type="radio" name="gender" id="skrill" value="skrill">
+                            <label for="skrill" class="radio-label">Skrill</label>
+                        </div>
+                        <input type="submit" value="Process" class="payment-buy">
                     </form>
-                </div>
 
-                <div class="payment-vertical-line"></div>
 
-                <div class="payment">
-                    <h2>Payment</h2>
-                    <div class="payment-total-payment">
-                        Total Payment
-                        <div class="shopping-sum-totalOrder">¥<span id="totalOrder">0</span></div>
-                    </div>
-
-                    <div class="payment-method">Payment Method</div>
-                    <form>
-                        <input type="radio" placeholder=""> Paypal
-                        <input type="radio" placeholder=""> Skrill
-                    </form>
-                    <div class="payment-buy">
-                        <a href="./index.html">Process</a>
-                    </div>
-                    
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -109,7 +111,7 @@
     <script src="./assets/js/cart.js"></script>
     <script src="./assets/js/index.js"></script>
     <script>
-        document.getElementById("totalOrder").innerHTML=localStorage.getItem("TotalCost");
+        document.getElementById("totalOrder").innerHTML = localStorage.getItem("TotalCost");
     </script>
 
 </body>

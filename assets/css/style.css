@@ -970,7 +970,7 @@ footer {
 } */
 .container-payment {
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -998,34 +998,35 @@ footer {
   width: 300px;
 }
 
-.male {
-  /* margin: 0px auto; */
+/* TOMBOL PILHAN RADIO */
+
+.radio-choose {
+  margin: 0.5rem;
 }
 
-.female {
-  /* margin: 0px auto; */
+.radio-choose input[type="radio"] {
+  margin: 0;
+  width: 5vw;
 }
 
-.female input {
-  /* margin: -21px; */
-}
-.gender-form-input {
-  /* justify-content: flex-start; */
+.radio-label {
+  display: inline-block;
 }
 
 .customer-information-card {
   background-color: var(--sec-color);
   height: fit-content;
-  width: 60vw;
+  width: fit-content;
   border-radius: 20px;
   padding: 4%;
+  margin: 4%;
 }
 
 .customer-information-card-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 69vh;
+  height: fit-content;
   flex-direction: row;
 }
 
@@ -1068,9 +1069,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 90% auto;
+  margin: 30px auto;
   font-size: 1.3rem;
   font-weight: 700;
+  color: white;
 }
 
 .payment-buy a {
