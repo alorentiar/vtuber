@@ -12,13 +12,13 @@ let products = [
   {
     name: "Shiranui Flare",
     tag: "ShiranuiFlare.png",
-    price: 49.9,
+    price: 48.9,
     inCart: 0,
   },
   {
     name: "Inugami Korone",
     tag: "InugamiKorone.png",
-    price: 50.9,
+    price: 48.9,
     inCart: 0,
   },
   {
@@ -139,7 +139,6 @@ function displayCart() {
   //   console.log(totalCartPrice);
   // }
   document.querySelector(".shopping-sum-totalOrder span").textContent = totalCartPrice;
-
 }
 
 function deleteData() {
