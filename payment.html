@@ -45,23 +45,23 @@
             <div class="customer-information-card-container">
                 <div class="customer-information-forms">
                     <h2>Customer Information</h2>
-                    <form action="validate()" method="POST" onsubmit="validate()">
+                    <form action="./index.html" method="POST" id="form">
                         Name <input type="text" placeholder="Name" id="name">
                         <div class="gender">
                             Gender:
                             <br>
                             <div class="radio-choose">
-                                <input type="radio" name="gender" id="male" value="male">
+                                <input type="radio" name="gender" id="maleB" value="male">
                                 <label for="male" class="radio-label">Male</label>
 
                             </div>
                             <div class="radio-choose">
-                                <input type="radio" name="gender" id="female" value="female">
+                                <input type="radio" name="gender" id="femaleB" value="female">
                                 <label for="female" class="radio-label">Female</label>
                             </div>
                         </div>
-                        Email <input type="email" placeholder="Email" id="email">
-                        Phone <input type="phone" placeholder="Phone" id="phone">
+                        Email <input type="text" placeholder="Email" id="email">
+                        Phone <input type="text" placeholder="Phone" id="phone">
                         Address <input type="text" placeholder="Address" id="address">
 
                         <h2>Payment</h2>
@@ -73,15 +73,15 @@
                         <div class="payment-method">Payment Method</div>
 
                         <div class="radio-choose">
-                            <input type="radio" name="gender" id="paypal" value="paypal">
+                            <input type="radio" name="payment" id="paypal" value="paypal">
                             <label for="paypal" class="radio-label">Paypal</label>
 
                         </div>
                         <div class="radio-choose">
-                            <input type="radio" name="gender" id="skrill" value="skrill">
+                            <input type="radio" name="payment" id="skrill" value="skrill">
                             <label for="skrill" class="radio-label">Skrill</label>
                         </div>
-                        <input type="submit" value="Process" class="payment-buy">
+                        <input type="submit" value="Process" class="payment-buy" onclick="validate()">
                     </form>
 
 
@@ -107,7 +107,8 @@
     </footer>
 
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./assets/js/cart.js"></script>
     <script src="./assets/js/index.js"></script>
     <script>
